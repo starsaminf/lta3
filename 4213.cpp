@@ -15,7 +15,6 @@ int longestCommonSubsequence( string a,  string b) {
       L[i][j]=max(L[i-1][j],L[i][j-1]);
       for(int h=0; h <= i; h++){
         if(h >= k)L[i][j]=max(L[i][j],L[i-h][j-h]+h);     
-        if(a[i-h]!=b[j-h])break;
      }
    }
  }
@@ -23,7 +22,7 @@ int longestCommonSubsequence( string a,  string b) {
 }
 
 int main() {
-  //freopen("12147.in","r",stdin);
+  //freopen("4213.in","r",stdin);
   string a, b;
   while(scanf("%d",&k) and k!=0){
     cin >> a >> b;
