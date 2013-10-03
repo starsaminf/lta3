@@ -14,7 +14,8 @@ int longestCommonSubsequence( string a,  string b) {
     for(int j = k; j < B; j++) {
       L[i][j]=max(L[i-1][j],L[i][j-1]);
       for(int h=0; h <= i; h++){
-        if(h >= k)L[i][j]=max(L[i][j],L[i-h][j-h]+h);     
+        if(h >= k)L[i][j]=max(L[i][j],L[i-h][j-h]+h);
+        if(a[i-h]!=b[j-h])break;
      }
    }
  }
